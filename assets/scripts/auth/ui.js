@@ -1,7 +1,9 @@
 'use strict'
 
+const store = require('./../store')
+
 const onSignUpSuccess = function (response) {
-  $('#message').text(response.user.enail + ' succesfully signed up')
+  $('#message').text(response.user.email + ' succesfully signed up')
   $('#sign-up').trigger('reset')
 }
 
@@ -9,7 +11,19 @@ const onSignUpfailure = function (response) {
   $('message').text('Failed')
 }
 
+const onSignInSuccess = function (response) {
+  $('#message').text(response.user.email + ' successfully signed in')
+  $('#sign-in').trigger('reset')
+  store.user = response.user
+}
+
+const onSignInFailure = function (response) {
+  $('message').text('sign in failed')
+}
+
 module.exports = {
   onSignUpSuccess,
-  onSignUpfailure
+  onSignUpfailure,
+  onSignInSuccess,
+  onSignInFailure
 }
