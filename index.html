@@ -46,16 +46,26 @@
       </fieldset>
     </form>
     <button id="startGame">Start Game</button>
-    <div id="container">
-          <div class="box" id="0"></div>
-          <div class="box" id="1"></div>
-          <div class="box" id="2"></div>
-          <div class="box" id="3"></div>
-          <div class="box" id="4"></div>
-          <div class="box" id="5"></div>
-          <div class="box" id="6"></div>
-          <div class="box" id="7"></div>
-          <div class="box" id="8"></div>
-      </div>
+    <div class="container">
+    <div class="row bottom">
+      <div class="col side">0</div>
+      <div class="col side">1</div>
+      <div class="col">2</div>
+    </div>
+    <div class="row bottom">
+      <div class="col side">3</div>
+      <div class="col side">4</div>
+      <div class="col">5</div>
+    </div>
+    <div class="row">
+      <div class="col side">6</div>
+      <div class="col side">7</div>
+      <div class="col">8</div>
+    </div>
+  </div>
+  $( "#container" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
     </body>
 </html>

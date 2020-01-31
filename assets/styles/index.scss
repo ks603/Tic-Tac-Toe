@@ -1,1 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
+
+.container {
+  width: 350px;
+  height: 350px;
+  margin-top: 150px;
+}
+
+.row {
+  height: 100px;
+}
+
+.col {
+  height: 100px;
+  width: 100px;
+}
+
+.bottom {
+  border-bottom: 10px solid black;
+}
+
+.side {
+  border-right: 10px solid black;
+}
