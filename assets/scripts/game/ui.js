@@ -1,13 +1,17 @@
 const store = require('./../store')
 
 const onCreateGamesuccess = response => {
-  $('#message').text(store.user.email + ' successfully started game')
-  $('#newGame').show()
-  $('#gameBoard').show()
+  $('#message').text(response.user.email + ' succesfully signed up')
+  $('#newGame').trigger('reset')
+  $('#message').removeClass()
+  $('#message').addClass('success-message')
 }
 
 const onCreateGameFailure = response => {
-  $('#message').text(store.user.email + ' something went wrong')
+  $('#message').text(response.user.email + ' something went wrong')
+  $('message').text('Failed')
+  $('#message').removeClass()
+  $('#message').addClass('failure-message')
 }
 
 const onUpdateGameSuccess = response => {

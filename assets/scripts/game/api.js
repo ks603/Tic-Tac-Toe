@@ -8,9 +8,7 @@ const createGame = () => {
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
-    data: {
-      'game': {}
-    }
+    data: '{}'
   })
 }
 
@@ -42,9 +40,8 @@ const getGame = () => {
   })
 }
 
-module.export = {
+module.exports = {
   createGame,
   updateGame,
   getGame
-
 }
