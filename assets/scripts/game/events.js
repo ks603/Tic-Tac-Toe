@@ -1,13 +1,13 @@
 'use strict'
 
+const store = require('./../store')
+
 const api = require('./api')
 const ui = require('./ui')
 
-const currentPlayer = 'X'
-
 const playGame = function (event) {
   event.preventDefault()
-  $(event.target).text(currentPlayer)
+  $(event.target).text(store.store.currentPlayer)
 }
 
 const onNewGame = function (event) {
