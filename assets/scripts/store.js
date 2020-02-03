@@ -7,7 +7,7 @@ const store = {
 
 for (let i = 0; i < 9; i++) {
   if (i % 2 === 0) {
-    store.currentPlayer = 'x'
+    store.currentPlayer = 'X'
   } else {
     store.currentPlayer = 'O'
   }
