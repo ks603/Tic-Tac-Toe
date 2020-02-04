@@ -1,26 +1,24 @@
 const store = require('./../store')
 
-const onCreateGamesuccess = response => {
-  $('#message').text(response.user.email + ' succesfully signed up')
-  $('#newGame').trigger('reset')
-  $('#message').removeClass()
-  $('#message').addClass('success-message')
+const onCreateGameSuccess = function (data) {
+  store.game = data.game
+  $('#gameBoard').show()
+  $('#message').text('Created game successfully!')
 }
 
-const onCreateGameFailure = response => {
-  $('#message').text(response.user.email + ' something went wrong')
-  $('message').text('Failed')
-  $('#message').removeClass()
-  $('#message').addClass('failure-message')
+const onCreateGameFailure = function (data) {
+  store.game = data.game
+  $('#message').text('Created game failed')
 }
 
-const onUpdateGameSuccess = response => {
-  $('#message').text(store.user.email + ' game updated')
-  // console.log(store)
+const onUpdateGameSuccess = function (responseData) {
+  store.game = responseData.game
+  $('#message').text('Updated game successfully!')
 }
 
-const onUpdateGameFailure = response => {
-  $('#message').text(store.user.email + ' something went wrong')
+const onUpdateGameFailure = function (responseData) {
+  store.game = responseData.game
+  $('#message').text('Update game failed')
 }
 
 const onGetGamesSuccess = response => {
@@ -32,7 +30,7 @@ const onGetGamesFailure = response => {
 }
 
 module.exports = {
-  onCreateGamesuccess,
+  onCreateGameSuccess,
   onCreateGameFailure,
   onUpdateGameSuccess,
   onUpdateGameFailure,

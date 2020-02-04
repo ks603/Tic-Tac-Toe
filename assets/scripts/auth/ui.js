@@ -7,7 +7,6 @@ const onSignUpSuccess = function (response) {
   $('#sign-up').trigger('reset')
   $('#message').removeClass()
   $('#message').addClass('success-message')
-  $('#gameBoard').show()
 }
 
 const onSignUpfailure = function (response) {
@@ -25,7 +24,6 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#newGame').show()
-  $('#gameBoard').show()
 }
 
 const onSignInFailure = function (response) {
