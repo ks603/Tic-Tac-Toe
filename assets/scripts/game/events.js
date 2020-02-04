@@ -55,7 +55,7 @@ $('.box').one('click', function (event) {
   } else if ($('#tile4').html() === 'X' && $('#tile5').html() === 'X' && $('#tile6').html() === 'X') {
     $('#message').text('Player X won')
     $('.box').off('click')
-  } else if ($('#tile7').html() === 'X' && $('#tile8').html() === 'X' && $('#tile').html() === 'X') {
+  } else if ($('#tile7').html() === 'X' && $('#tile8').html() === 'X' && $('#tile9').html() === 'X') {
     $('#message').text('Player X won')
     $('.box').off('click')
   } else if ($('#tile1').html() === 'X' && $('#tile4').html() === 'X' && $('#tile7').html() === 'X') {
@@ -64,10 +64,10 @@ $('.box').one('click', function (event) {
   } else if ($('#tile2').html() === 'X' && $('#tile5').html() === 'X' && $('#tile8').html() === 'X') {
     $('#message').text('CPlayer X won')
     $('.box').off('click')
-  } else if ($('#tile3').html() === 'X' && $('#tile6').html() === 'X' && $('#tile').html() === 'X') {
+  } else if ($('#tile3').html() === 'X' && $('#tile6').html() === 'X' && $('#tile9').html() === 'X') {
     $('#message').text('Player X won')
     $('.box').off('click')
-  } else if ($('#tile1').html() === 'X' && $('#tile5').html() === 'X' && $('#tile').html() === 'X') {
+  } else if ($('#tile1').html() === 'X' && $('#tile5').html() === 'X' && $('#tile9').html() === 'X') {
     $('#message').text('Player X won')
     $('.box').off('click')
   } else if ($('#tile3').html() === 'X' && $('#tile5').html() === 'X' && $('#tile7').html() === 'X') {
@@ -80,7 +80,7 @@ $('.box').one('click', function (event) {
   } else if ($('#tile4').html() === 'O' && $('#tile5').html() === 'O' && $('#tile6').html() === 'O') {
     $('#message').text('Player O won')
     $('.box').off('click')
-  } else if ($('#tile7').html() === 'O' && $('#tile8').html() === 'O' && $('#tile').html() === 'O') {
+  } else if ($('#tile7').html() === 'O' && $('#tile8').html() === 'O' && $('#tile9').html() === 'O') {
     $('#message').text('Player O won')
     $('.box').off('click')
   } else if ($('#tile1').html() === 'O' && $('#tile4').html() === 'O' && $('#tile7').html() === 'O') {
@@ -89,10 +89,10 @@ $('.box').one('click', function (event) {
   } else if ($('#tile2').html() === 'O' && $('#tile5').html() === 'O' && $('#tile8').html() === 'O') {
     $('#message').text('Player O won')
     $('.box').off('click')
-  } else if ($('#tile3').html() === 'O' && $('#tile6').html() === 'O' && $('#tile').html() === 'O') {
+  } else if ($('#tile3').html() === 'O' && $('#tile6').html() === 'O' && $('#tile9').html() === 'O') {
     $('#message').text('Player O won')
     $('.box').off('click')
-  } else if ($('#tile1').html() === 'O' && $('#tile5').html() === 'O' && $('#tile').html() === 'O') {
+  } else if ($('#tile1').html() === 'O' && $('#tile5').html() === 'O' && $('#tile9').html() === 'O') {
     $('#message').text('Player O won')
     $('.box').off('click')
   } else if ($('#tile3').html() === 'O' && $('#tile5').html() === 'O' && $('#tile7').html() === 'O') {
