@@ -1,1 +1,48 @@
 @import '~bootstrap/scss/bootstrap';
+
+div {
+  color: blue;
+}
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+div {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 25px;
+  color: red;
+}
+
+.container {
+  width: 650px;
+  height: 650px;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.row {
+  height: 500px;
+  width: 500px;
+  border-image-outset: black;
+  font-size: 50px;
+  text-align: center;
+}
+
+.col {
+  height: 100px;
+  width: 100px;
+  background-color: black
+}
+
+.box {
+  border: 2px solid black;
+  border-radius: 20px white;
+  background-color: white;
+  font-size: 50px;
+}

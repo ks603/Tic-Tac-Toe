@@ -23,10 +23,11 @@ const onSignInSuccess = function (response) {
   $('#sign-out').show()
   $('#sign-in').hide()
   $('#sign-up').hide()
+  $('#newGame').show()
 }
 
 const onSignInFailure = function (response) {
-  $('message').text('sign in failed')
+  $('#message').text('sign in failed')
 }
 
 const onChangePasswordSuccess = function (response) {
@@ -46,9 +47,11 @@ const onSignOutSuccess = function (response) {
   $('#message').text('Sign Out Succeeded')
   $('#message').text('Sign Out Succeeded')
   $('#change-password').hide()
+  $('#gameBoard').hide()
   $('#sign-out').hide()
   $('#sign-in').show()
   $('#sign-up').show()
+  $('#newGame').hide()
   store.user = null
 }
 

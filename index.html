@@ -14,6 +14,7 @@
     <body>
       <h1>Tic-Tac-Toe</h1>
       <p id='message'></p>
+      <div>
       <form id="sign-up">
         <fieldset>
           <legend>Sign Up</legend>
@@ -45,17 +46,25 @@
         <input type="submit" value="Sign Out!">
       </fieldset>
     </form>
-    <button id="startGame">Start Game</button>
-    <div id="container">
-          <div class="box" id="0"></div>
-          <div class="box" id="1"></div>
-          <div class="box" id="2"></div>
-          <div class="box" id="3"></div>
-          <div class="box" id="4"></div>
-          <div class="box" id="5"></div>
-          <div class="box" id="6"></div>
-          <div class="box" id="7"></div>
-          <div class="box" id="8"></div>
+    <button id="newGame">New Game</button>
+  </div>
+    <p id ='gameMessage'></p>
+    <div data-cell-index='0'>
+</div>
+    <div class="container" id="gameBoard">
+      <div class="row">
+        <div class="col-4 box" id="tile1"></div>
+        <div class="col-4 box" id="tile2"></div>
+        <div class="col-4 box" id="tile3"></div>
+        <div class="col-4 box" id="tile4"></div>
+        <div class="col-4 box" id="tile5"></div>
+        <div class="col-4 box" id="tile6"></div>
+        <div class="col-4 box" id="tile7"></div>
+        <div class="col-4 box" id="tile8"></div>
+        <div class="col-4 box" id="tile9"></div>
       </div>
+    </div>
+
+
     </body>
 </html>
