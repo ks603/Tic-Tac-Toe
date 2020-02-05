@@ -11,6 +11,7 @@ const onSignUpSuccess = function (response) {
 
 const onSignUpFailure = function (response) {
   $('#message').text('sign up failed')
+  $('form').trigger('reset')
 }
 
 const onSignInSuccess = function (response) {
@@ -26,6 +27,7 @@ const onSignInSuccess = function (response) {
 
 const onSignInFailure = function (response) {
   $('#message').text('sign in failed')
+  $('form').trigger('reset')
 }
 
 const onChangePasswordSuccess = function (response) {
@@ -35,6 +37,7 @@ const onChangePasswordSuccess = function (response) {
 
 const onChangePasswordFailure = function (response) {
   $('#message').text('Change Password failed')
+  $('form').trigger('reset')
 }
 
 const onSignOutFailure = function (response) {
