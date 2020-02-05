@@ -18,91 +18,71 @@ const onCreateGame = function (data) {
     .then(ui.onCreateGameSuccess)
     .catch(ui.onCreateGameFailure)
 }
-const onUpdateGame = function (event) {
-  // console.log('In onUpdateGame')
-  // use event (the parameter that comes in)
-  // it will come in with `event` data telling that the gameBoard was clicked
-  // and if you do event.target on that, it will tell you which box was clicked
-  // get that information put into a variable
-  // then what you need to do is format a JSON object to get ready to send for
-  // your AJAX request. it will look like this when it's in the AJAX request
-  //   {
-  //   "game": {
-  //     "cell": {
-  //       "index": 0,
-  //       "value": "x"
-  //     },
-  //     "over": false
-  //   }
-  // }
-  // so you need to replace '0', 'x', and 'false' with the proper data every time
-  // using variables and store the whole JSON object in preformattedAJAXRequest
-  event.preventDefault()
-  api.updateGame(preformattedAJAXRequest)
-    .then(ui.onUpdateGameSuccess)
-    .catch(ui.onUpdateGameFailure)
-}
 
 let currentPlayer = 'X'
 
 $('.box').one('click', function (event) {
-  $(event.target).text(currentPlayer)
-  currentPlayer = currentPlayer === 'O' ? currentPlayer = 'X' : currentPlayer = 'O'
+  const index = $(event.target).attr('id')
+  api.updateGame(index, currentPlayer)
+    .then(() => {
+      $(event.target).text(currentPlayer)
+      currentPlayer = currentPlayer === 'O' ? currentPlayer = 'X' : currentPlayer = 'O'
 
-  if ($('#tile1').html() === 'X' && $('#tile2').html() === 'X' && $('#tile3').html() === 'X') {
-    $('#message').text('Player X won')
-    $('.box').off('click')
-  } else if ($('#tile4').html() === 'X' && $('#tile5').html() === 'X' && $('#tile6').html() === 'X') {
-    $('#message').text('Player X won')
-    $('.box').off('click')
-  } else if ($('#tile7').html() === 'X' && $('#tile8').html() === 'X' && $('#tile9').html() === 'X') {
-    $('#message').text('Player X won')
-    $('.box').off('click')
-  } else if ($('#tile1').html() === 'X' && $('#tile4').html() === 'X' && $('#tile7').html() === 'X') {
-    $('#message').text('Player X won')
-    $('.box').off('click')
-  } else if ($('#tile2').html() === 'X' && $('#tile5').html() === 'X' && $('#tile8').html() === 'X') {
-    $('#message').text('CPlayer X won')
-    $('.box').off('click')
-  } else if ($('#tile3').html() === 'X' && $('#tile6').html() === 'X' && $('#tile9').html() === 'X') {
-    $('#message').text('Player X won')
-    $('.box').off('click')
-  } else if ($('#tile1').html() === 'X' && $('#tile5').html() === 'X' && $('#tile9').html() === 'X') {
-    $('#message').text('Player X won')
-    $('.box').off('click')
-  } else if ($('#tile3').html() === 'X' && $('#tile5').html() === 'X' && $('#tile7').html() === 'X') {
-    $('#message').text('Player X won')
-    $('.box').off('click')
-  }
-  if ($('#tile1').html() === 'O' && $('#tile2').html() === 'O' && $('#tile3').html() === 'O') {
-    $('#message').text('Player O won')
-    $('.box').off('click')
-  } else if ($('#tile4').html() === 'O' && $('#tile5').html() === 'O' && $('#tile6').html() === 'O') {
-    $('#message').text('Player O won')
-    $('.box').off('click')
-  } else if ($('#tile7').html() === 'O' && $('#tile8').html() === 'O' && $('#tile9').html() === 'O') {
-    $('#message').text('Player O won')
-    $('.box').off('click')
-  } else if ($('#tile1').html() === 'O' && $('#tile4').html() === 'O' && $('#tile7').html() === 'O') {
-    $('#message').text('Player O won')
-    $('.box').off('click')
-  } else if ($('#tile2').html() === 'O' && $('#tile5').html() === 'O' && $('#tile8').html() === 'O') {
-    $('#message').text('Player O won')
-    $('.box').off('click')
-  } else if ($('#tile3').html() === 'O' && $('#tile6').html() === 'O' && $('#tile9').html() === 'O') {
-    $('#message').text('Player O won')
-    $('.box').off('click')
-  } else if ($('#tile1').html() === 'O' && $('#tile5').html() === 'O' && $('#tile9').html() === 'O') {
-    $('#message').text('Player O won')
-    $('.box').off('click')
-  } else if ($('#tile3').html() === 'O' && $('#tile5').html() === 'O' && $('#tile7').html() === 'O') {
-    $('#message').text('player O won!')
-    $('.box').off('click')
-  }
+      if ($('#0').html() === 'X' && $('#1').html() === 'X' && $('#2').html() === 'X') {
+        $('#message').text('Player X won')
+        $('.box').off('click')
+      } else if ($('#3').html() === 'X' && $('#4').html() === 'X' && $('#5').html() === 'X') {
+        $('#message').text('Player X won')
+        $('.box').off('click')
+      } else if ($('#6').html() === 'X' && $('#7').html() === 'X' && $('#8').html() === 'X') {
+        $('#message').text('Player X won')
+        $('.box').off('click')
+      } else if ($('#0').html() === 'X' && $('#3').html() === 'X' && $('#6').html() === 'X') {
+        $('#message').text('Player X won')
+        $('.box').off('click')
+      } else if ($('#1').html() === 'X' && $('#4').html() === 'X' && $('#7').html() === 'X') {
+        $('#message').text('CPlayer X won')
+        $('.box').off('click')
+      } else if ($('#2').html() === 'X' && $('#5').html() === 'X' && $('#8').html() === 'X') {
+        $('#message').text('Player X won')
+        $('.box').off('click')
+      } else if ($('#0').html() === 'X' && $('#4').html() === 'X' && $('#8').html() === 'X') {
+        $('#message').text('Player X won')
+        $('.box').off('click')
+      } else if ($('#2').html() === 'X' && $('#4').html() === 'X' && $('#6').html() === 'X') {
+        $('#message').text('Player X won')
+        $('.box').off('click')
+      }
+      if ($('#0').html() === 'O' && $('#1').html() === 'O' && $('#2').html() === 'O') {
+        $('#message').text('Player O won')
+        $('.box').off('click')
+      } else if ($('#3').html() === 'O' && $('#4').html() === 'O' && $('#5').html() === 'O') {
+        $('#message').text('Player O won')
+        $('.box').off('click')
+      } else if ($('#6').html() === 'O' && $('#7').html() === 'O' && $('#8').html() === 'O') {
+        $('#message').text('Player O won')
+        $('.box').off('click')
+      } else if ($('#0').html() === 'O' && $('#3').html() === 'O' && $('#6').html() === 'O') {
+        $('#message').text('Player O won')
+        $('.box').off('click')
+      } else if ($('#1').html() === 'O' && $('#4').html() === 'O' && $('#7').html() === 'O') {
+        $('#message').text('Player O won')
+        $('.box').off('click')
+      } else if ($('#2').html() === 'O' && $('#5').html() === 'O' && $('#8').html() === 'O') {
+        $('#message').text('Player O won')
+        $('.box').off('click')
+      } else if ($('#0').html() === 'O' && $('#4').html() === 'O' && $('#8').html() === 'O') {
+        $('#message').text('Player O won')
+        $('.box').off('click')
+      } else if ($('#2').html() === 'O' && $('#4').html() === 'O' && $('#6').html() === 'O') {
+        $('#message').text('player O won!')
+        $('.box').off('click')
+      }
+    })
+    .catch(ui.onUpdateGameFailure)
 })
 
 module.exports = {
   onGetGames,
-  onCreateGame,
-  onUpdateGame
+  onCreateGame
 }

@@ -9,10 +9,8 @@ const onSignUpSuccess = function (response) {
   $('#message').addClass('success-message')
 }
 
-const onSignUpfailure = function (response) {
-  $('message').text('Failed')
-  $('#message').removeClass()
-  $('#message').addClass('failure-message')
+const onSignUpFailure = function (response) {
+  $('#message').text('sign up failed')
 }
 
 const onSignInSuccess = function (response) {
@@ -57,7 +55,7 @@ const onSignOutSuccess = function (response) {
 
 module.exports = {
   onSignUpSuccess,
-  onSignUpfailure,
+  onSignUpFailure,
   onSignInSuccess,
   onSignInFailure,
   onChangePasswordSuccess,
