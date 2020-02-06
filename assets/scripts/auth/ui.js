@@ -23,6 +23,7 @@ const onSignInSuccess = function (response) {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#newGame').show()
+  $('#countGames').show()
 }
 
 const onSignInFailure = function (response) {

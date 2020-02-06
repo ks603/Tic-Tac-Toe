@@ -1,17 +1,14 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
 const authEvents = require('./auth/events')
 const gameEvents = require('./game/events')
-// use require without a reference to ensure a file is bundled
-// require('./example')
 
 $(() => {
   $('#change-password').hide()
   $('#sign-out').hide()
   $('#newGame').hide()
   $('#gameBoard').hide()
+  $('#countGames').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
@@ -20,5 +17,5 @@ $(() => {
   $('#newGame').on('submit', gameEvents.onCreateGame)
   $('#gameBoard').on('submit', gameEvents.onNewGame)
   $('#newGame').on('click', gameEvents.onCreateGame)
-  $('#getGames').on('click', gameEvents.getGames)
+  $('#countGames').on('click', gameEvents.onGetGames)
 })

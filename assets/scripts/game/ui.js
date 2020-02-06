@@ -4,6 +4,7 @@ const onCreateGameSuccess = function (data) {
   store.game = data.game
   $('#gameBoard').show()
   $('#message').text('Created game successfully!')
+  $('.box').text('')
 }
 
 const onCreateGameFailure = function (data) {
@@ -21,8 +22,8 @@ const onUpdateGameFailure = function (responseData) {
   $('#message').text('Update game failed')
 }
 
-const onGetGamesSuccess = response => {
-  $('#message').text(store.user.email + ' success')
+const onGetGameSuccess = function (data) {
+  $('#message').text('You have played ' + data.games.length + ' games!')
 }
 
 const onGetGamesFailure = response => {
@@ -34,6 +35,6 @@ module.exports = {
   onCreateGameFailure,
   onUpdateGameSuccess,
   onUpdateGameFailure,
-  onGetGamesSuccess,
+  onGetGameSuccess,
   onGetGamesFailure
 }
