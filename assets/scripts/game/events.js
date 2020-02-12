@@ -21,6 +21,12 @@ $('.box').on('click', function (event) {
   const index = $(event.target).attr('id')
   api.updateGame(index, currentPlayer)
     .then(() => {
+      const cellText = $(event.target).text()
+      console.log(`value of cell_text is ${cellText}`)
+      if (cellText !== '') {
+        console.log('cell is not empty')
+        return
+      }
       $(event.target).text(currentPlayer)
       currentPlayer = currentPlayer === 'O' ? currentPlayer = 'X' : currentPlayer = 'O'
 
