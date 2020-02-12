@@ -14,6 +14,7 @@ const createGame = () => {
 
 const updateGame = (index, value) => {
   console.log(index, value)
+  console.log('hi!!!!!!')
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',

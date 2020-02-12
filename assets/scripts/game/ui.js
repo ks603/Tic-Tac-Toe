@@ -15,6 +15,7 @@ const onCreateGameFailure = function (data) {
 const onUpdateGameSuccess = function (responseData) {
   store.game = responseData.game
   $('#message').text('Updated game successfully!')
+  $('.box').text('')
 }
 
 const onUpdateGameFailure = function (responseData) {
@@ -23,7 +24,7 @@ const onUpdateGameFailure = function (responseData) {
 }
 
 const onGetGameSuccess = function (data) {
-  $('#message').text('You have played ' + data.games.length + ' games!')
+  $('#message').text('You have played ' + data.games.length + ' !')
 }
 
 const onGetGamesFailure = response => {
