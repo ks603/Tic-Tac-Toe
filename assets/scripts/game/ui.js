@@ -20,10 +20,11 @@ const onUpdateGameSuccess = function (responseData) {
 
 const onUpdateGameFailure = function (responseData) {
   store.game = responseData.game
-  $('#message').text('Update game failed')
+
 }
 
 const onGetGameSuccess = function (data) {
+  console.log(data)
   $('#message').text('You have played ' + data.games.length + ' !')
 }
 

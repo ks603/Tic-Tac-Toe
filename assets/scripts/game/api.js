@@ -34,7 +34,7 @@ const updateGame = (index, value) => {
 
 const getGame = () => {
   return $.ajax({
-    url: config.apiUrl + '/games?over=true',
+    url: config.apiUrl + '/games',
     method: 'GET',
     headers: {
       Authorization: `Token token=${store.user.token}`
