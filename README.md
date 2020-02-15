@@ -35,5 +35,6 @@ that it is as enjoyable version of Tic Tac Toe as possible.
   looking from a style perspective.
 
 
+
 #### Wireframe:
-![wireframe](https://imgur.com/RkBP9im)
+![wireframe](https://i.imgur.com/RkBP9im.jpg)
