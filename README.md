@@ -1,26 +1,24 @@
-Application Title: A Description
+## Description
 
-This application allows the user to do x, y, and z. Maybe here's a reason why I wanted to do this project, or
-came up with this idea.
+This is the first project at General Assembly. For the first project i will be making Tic Tac Toe.,
+There will be multiple options allows such as user sign up, sign in, and sign out. There will also,
+be options such as to change your password and see how many games you played. The user will have,
+access tot their account by signing up with their email address. Two players will be able to play,
+from the same console.
 
-## Important Links
+I also will add messages throughout the game to let you know if your executed action was successfull,
+or not. This will help make the playing process as smooth as possible. I hope to some style also so,
+that it is as enjoyable version of Tic Tac Toe as possible.
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
-
-## Planning Story
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ornare magna. Curabitur leo arcu, elementum in posuere vitae, rutrum eu urna. Quisque tincidunt nulla sed mi cursus, nec tristique est fermentum. Etiam lacinia id neque ut egestas. Sed consequat convallis felis nec posuere. Sed non eros sed velit viverra tincidunt. Etiam et tortor sit amet lacus volutpat dignissim. Vestibulum convallis, felis a posuere pretium, turpis enim sollicitudin neque, pretium finibus leo metus sed sapien. Praesent iaculis pharetra nunc ac rhoncus. Duis eu risus in est porttitor egestas sit amet eget metus. Maecenas iaculis auctor ullamcorper. Donec pretium dolor non nisl egestas bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper pulvinar orci interdum mattis. Ut gravida volutpat mauris, a semper risus maximus ut.
 
 ### User Stories
 
-- As a user I want to sign in/up
-- As a user I want to Create a new < resource >
-- As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
-- As a user I want to Update a < resource > I own
-- As a user I want to Delete a < resource > I own
+- As a user I want to sign in and sign up successfully
+- As a user I want to sign out and change password.
+- As a user I want to play with a friend.
+- As a user I want to be able to start a new game.
+- As a user I want to see how many games have played.
+- As a user I want to see who if any won the game.
 
 ### Technologies Used
 
@@ -29,14 +27,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id ornare magna
 - Bootstrap
 - Javascript
 
-### Unsolved Problems
+### Future
 
-- Still need to ....
-- Would like to eventually ....
+- In the future I would like to be able to play across different consoles. I would like to,
+  make it so you can play from seperate computers. Making it a true multiplayer experience.
+- Would like to upgrade some of the styles and make the sign in and sign up page a lot better,
+  looking from a style perspective.
 
-## Images
-
----
 
 #### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
+![wireframe](https://imgur.com/RkBP9im)
